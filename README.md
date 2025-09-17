@@ -3,8 +3,8 @@
 A simple **Python program** to calculate whether a student satisfies the **75% attendance criteria** commonly required in colleges.  
 
 The program allows checking attendance for:
-- ✅ **Overall attendance** (all classes combined)  
-- ✅ **Individual subject attendance**  
+-  **Overall attendance** (all classes combined)  
+-  **Individual subject attendance**  
 
 ---
 
