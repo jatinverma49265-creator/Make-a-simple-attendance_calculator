@@ -1,0 +1,51 @@
+def check_attendance(total_classes, presents):
+    """Check attendance percentage"""
+    if total_classes == 0:
+        return 0
+    return (presents / total_classes) * 100
+
+
+def main():
+    print("----- College Attendance Calculator (75% Criteria) -----\n")
+
+    choice = input("Do you want to check for (1) Overall Attendance or (2) Individual Class? Enter 1 or 2: ")
+
+    if choice == "1":
+        # Overall Attendance
+        total_classes = int(input("Enter total number of classes conducted: "))
+        presents = int(input("Enter number of classes you attended: "))
+        absents = total_classes - presents
+
+        percentage = check_attendance(total_classes, presents)
+        print(f"\nTotal Classes: {total_classes}, Presents: {presents}, Absents: {absents}")
+        print(f"Attendance Percentage = {percentage:.2f}%")
+
+        if percentage >= 75:
+            print("✅ You are eligible (75% criteria satisfied).")
+        else:
+            print("❌ You are NOT eligible (Below 75%).")
+
+    elif choice == "2":
+        # Individual Class Attendance
+        subjects = int(input("Enter number of subjects: "))
+
+        for i in range(1, subjects + 1):
+            print(f"\n--- Subject {i} ---")
+            total = int(input("Enter total classes conducted: "))
+            present = int(input("Enter attended classes: "))
+            absent = total - present
+
+            percentage = check_attendance(total, present)
+            print(f"Subject {i} Attendance = {percentage:.2f}%")
+
+            if percentage >= 75:
+                print("✅ Eligible for this subject.")
+            else:
+                print("❌ Not eligible for this subject.")
+
+    else:
+        print("Invalid choice! Please enter 1 or 2.")
+
+
+if __name__ == "__main__":
+    main()
