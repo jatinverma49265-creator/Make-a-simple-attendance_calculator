@@ -21,9 +21,9 @@ def main():
         print(f"Attendance Percentage = {percentage:.2f}%")
 
         if percentage >= 75:
-            print("✅ You are eligible (75% criteria satisfied).")
+            print(" You are eligible (75% criteria satisfied).")
         else:
-            print("❌ You are NOT eligible (Below 75%).")
+            print(" You are NOT eligible (Below 75%).")
 
     elif choice == "2":
         # Individual Class Attendance
@@ -39,9 +39,9 @@ def main():
             print(f"Subject {i} Attendance = {percentage:.2f}%")
 
             if percentage >= 75:
-                print("✅ Eligible for this subject.")
+                print(" Eligible for this subject.")
             else:
-                print("❌ Not eligible for this subject.")
+                print(" Not eligible for this subject.")
 
     else:
         print("Invalid choice! Please enter 1 or 2.")
